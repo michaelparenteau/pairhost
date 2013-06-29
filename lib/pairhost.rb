@@ -176,7 +176,7 @@ module Pairhost
         server.wait_for { ready? }
       end
 
-      exec "ssh -A -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=QUIET pair@#{server.dns_name}"
+      exec "ssh -A -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=QUIET ubuntu@#{server.dns_name}"
     end
 
     map "halt" => :stop
